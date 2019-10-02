@@ -1,5 +1,7 @@
 body {
     width: 600px;
+    font-family: 'Turret Road';
+    background-color: gray;
 }
 
 #rules {
@@ -16,11 +18,20 @@ body {
 h1 {
     display: flex;
     justify-content: center;
+    font-family: fantasy;
+    font-size: 72px;
+    margin: 0;
 }
 
 h2 {
     display: flex;
     justify-content: center;
+    font-size: 42px;
+}
+
+#guess {
+    font-size: 30px;
+    border: solid 
 }
 
 #button-score {
@@ -31,11 +42,40 @@ h2 {
 #guesses {
     display: flex;
     justify-content: center;
+    padding: 10px;
+    margin: 5px;
 }
 
 #hud {
     display: flex;
     justify-content: space-around;
 }
+
+#chances {
+    border: dashed 2px black;
+    padding: 5px;
+    background-color: white;
+}
+
+#chances-left {
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+#high-low {
+    border: dashed 2px black;
+    padding: 5px;
+    background-color: white;
+}
+
+#user-high-low {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+
+
 
 

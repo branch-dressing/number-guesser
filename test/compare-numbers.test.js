@@ -35,7 +35,7 @@ test('should return false if guess is less than 10', function(assert) {
     assert.equal(results, false);
 });
 
-test('should return undefined if guess is equal to 10', function(assert) {
+test('should return win if guess is equal to 10', function(assert) {
     //Arrange
     // Set up your parameters and expectations
     const guess = 10;
@@ -47,5 +47,5 @@ test('should return undefined if guess is equal to 10', function(assert) {
 
     //Assert
     // Make assertions about what is expected valid result
-    assert.equal(results, undefined);
+    assert.equal(results, 'win');
 });
