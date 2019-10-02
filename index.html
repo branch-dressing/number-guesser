@@ -17,24 +17,26 @@
             <li>When you click "PLAY!" a random number between <em>1</em> and <em>20</em> will be genertated.</li>
             <li>You have 4 chances to guess.</li>
             <li>After each guess, you will be told if you were too high or low.</li>
-            <li>If you win, you will gain <strong>10 points!</strong></li>
+            <li>If you win, you will gain <strong> 10 points!</strong></li>
             <li>But! If you aren't able to guess in time, you will <strong>lose 10 points!</strong></li>
             <li>Can you score 100 points?</li>
         </ul>
-        <button id="play">PLAY!</button>
+        <div id="button-score">
+            <button id="play">PLAY!</button> Total Score: <span id="score">0</span>
+        </div>
     </section>
 
     <hr>
 
     <div id="game">
-        <input type="number" id="guess" min="1" max="20">
-        <button id="submit-guess">Guess</button>
-        <!--- Create a input for a number-->
-        <!---create a button to submit-->
+        <div id="guesses">
+            <input type="number" id="guess" min="1" max="20"> <button id="submit-guess">Guess</button>
+        </div>
 
+        <secetion id="hud">
         <div id="chances">
             <h3>Chances Left</h3>
-            <span id="chances-left"></span>
+            <span id="chances-left">4</span>
         </div>
 
         <div>
@@ -43,8 +45,9 @@
 
         <div id="high-low">
             <h3>Your guess was:</h3>
-            <span id="user-high-low"></span>
+            <span id="user-high-low">High/Low</span>
         </div>
+        </section>
     </div>
 
     <div id="win">

@@ -1,0 +1,41 @@
+body {
+    width: 600px;
+}
+
+#rules {
+    display: flex;
+    flex-direction: column;
+}
+
+
+#game {
+    display: flex;
+    flex-direction: column; 
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+}
+
+#button-score {
+    display: flex;
+    justify-content: center;
+}
+
+#guesses {
+    display: flex;
+    justify-content: center;
+}
+
+#hud {
+    display: flex;
+    justify-content: space-around;
+}
+
+

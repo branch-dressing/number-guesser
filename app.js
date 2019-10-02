@@ -1,6 +1,12 @@
 import compareNumbers from './compareNumbers.js';
 
 let score = 0;
+let guessesLeft = 4;
+let highLow = ' ';
+let secretNumber = 0;
+
+document.getElementById('submit-guess').disabled = true;
+document.getElementById('guess').disabled = true;
 
 //create a play button that starts the game
 document.getElementById('play').addEventListener('click', playNewGame);
@@ -8,11 +14,14 @@ document.getElementById('play').addEventListener('click', playNewGame);
 //track total points for consecutive plays
 
 function playNewGame(){
-    let guessesLeft = 4;
-    let highLow = ' ';
+    guessesLeft = 4;
+    highLow = ' ';
 
-    //Creates a new random number
-    const secretNumber = Math.floor(Math.random() * 20) + 1;
+    document.getElementById('play').disabled = true;
+    document.getElementById('submit-guess').disabled = false;
+    document.getElementById('guess').disabled = false;
+
+    secretNumber = Math.floor(Math.random() * 20) + 1;
     console.log('random:' + secretNumber);
 
     document.getElementById('submit-guess').addEventListener('click', sumbitGuess);
@@ -20,10 +29,13 @@ function playNewGame(){
     function sumbitGuess(){
         guessesLeft -= 1;
         document.getElementById('chances-left').textContent = guessesLeft;
-
-
+        if (guessesLeft < 0) {
+            document.getElementById('submit-guess').disabled = true;
+            score -= 10;
+        }
+        
+        
         const guess = document.getElementById('guess').value;
-        console.log("guess: " + guess);
         const guessStatus = compareNumbers(guess, secretNumber);
         
         if (guessStatus === true) {
@@ -32,8 +44,15 @@ function playNewGame(){
             highLow = 'Too Low';
         } else {
             highLow = 'WINNER';
+            score += 10;
+            document.getElementById('score').textContent = score;
+            document.getElementById('submit-guess').disabled = true;
+            document.getElementById('guess').disabled = true;
+            document.getElementById('play').disabled = false;
+            console.log(guessesLeft)
         }
         document.getElementById('user-high-low').textContent = highLow;
+
     }
 
 
