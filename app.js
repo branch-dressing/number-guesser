@@ -14,6 +14,7 @@ document.getElementById('submit-guess').addEventListener('click', sumbitGuess);
 
 function playNewGame(){   
     document.getElementById('chances-left').textContent = guessesLeft;
+    document.getElementById('win-lose').textContent = ' ';
 
     document.getElementById('play').disabled = true;
     document.getElementById('submit-guess').disabled = false;
@@ -28,18 +29,19 @@ function sumbitGuess() {
     
     if (guessesLeft === 0) {
         score -= 10;
+        document.getElementById('win-lose').textContent = 'GAME OVER!';
         gameOver();
     }   
     
     const guess = document.getElementById('guess').value;
     const guessStatus = compareNumbers(guess, secretNumber);
     
-    if (guessStatus === true) {
+    if (guessStatus === 1) {
         highLow = 'Too High';
-    } else if (guessStatus === false) {
+    } else if (guessStatus === -1) {
         highLow = 'Too Low';
-    } else if (guessStatus === 'win'){
-        highLow = 'WINNER';
+    } else if (guessStatus === 0){
+        document.getElementById('win-lose').textContent = 'WINNER!';
         score += 10;
         gameOver();
     }

@@ -1,9 +1,9 @@
 function compareNumber(guess, secretNumber) {
-    if (guess > secretNumber) {return true;
+    if (guess > secretNumber) {return 1;
     } else if (guess < secretNumber) {
-        return false;
+        return -1;
     } else if (guess === secretNumber) {
-        return 'win';
+        return 0;
     }
 }   
 

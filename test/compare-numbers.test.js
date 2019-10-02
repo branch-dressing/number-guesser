@@ -5,7 +5,7 @@ import compareNumbers from '../compareNumbers.js';
 
 const test = QUnit.test;
 
-test('should return true if guess is greater than 10', function(assert) {
+test('should return 1 if guess is greater than 10', function(assert) {
     //Arrange
     // Set up your parameters and expectations
     const guess = 15;
@@ -17,10 +17,10 @@ test('should return true if guess is greater than 10', function(assert) {
 
     //Assert
     // Make assertions about what is expected valid result
-    assert.equal(results, true);
+    assert.equal(results, 1);
 });
 
-test('should return false if guess is less than 10', function(assert) {
+test('should return -1 if guess is less than 10', function(assert) {
     //Arrange
     // Set up your parameters and expectations
     const guess = 8;
@@ -32,10 +32,10 @@ test('should return false if guess is less than 10', function(assert) {
 
     //Assert
     // Make assertions about what is expected valid result
-    assert.equal(results, false);
+    assert.equal(results, -1);
 });
 
-test('should return win if guess is equal to 10', function(assert) {
+test('should return 0 if guess is equal to 10', function(assert) {
     //Arrange
     // Set up your parameters and expectations
     const guess = 10;
@@ -47,5 +47,5 @@ test('should return win if guess is equal to 10', function(assert) {
 
     //Assert
     // Make assertions about what is expected valid result
-    assert.equal(results, 'win');
+    assert.equal(results, 0);
 });

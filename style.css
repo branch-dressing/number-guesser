@@ -75,6 +75,12 @@ h2 {
     justify-content: center;
 }
 
+#win-lose-box {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    font-size: 72px
+}
 
 
 
