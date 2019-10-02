@@ -6,11 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Guess a Number</title>
 </head>
 
 <body>
+    <h1>Guess A Number!!!</h1>
+    <h2>Rules</h2>
+    <ul>
+        <li>You have 4 chances to guess.</li>
+        <li>After each guess, you will be told if you were too high or low.</li>
+        <li>Have Fun! (this counts)</li>
+    </ul>
 
+    <div id="game">
+        <h2>Guess here!</h2>
+        <!--- Create a input for a number-->
+        <!---create a button to submit-->
+        <h3>Guesses Left</h3>
+        <span id="guesses-left"></span>
+        <h3>Your guess was:</h3>
+        <span id="high-low"></span>
+    </div>
+
+    <div id="win">
+        <!-- display winning messege/screen/whateves-->
+    </div>
+
+    <div id="lose">
+            <!-- display defeat messege/screen/whateves-->
+        </div>
     <script src="app.js"></script>
 </body>
 
